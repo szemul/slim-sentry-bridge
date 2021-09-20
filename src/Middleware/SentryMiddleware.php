@@ -31,6 +31,18 @@ class SentryMiddleware implements MiddlewareInterface
         $this->dsn = $config->get('application.sentry.dsn', null);
     }
 
+    /** @return array<string,mixed>|null */
+    public function __debugInfo(): ?array
+    {
+        return [
+            'dsn'                 => '** REDACTED',
+            'hub'                 => '** Instance of ' . get_class($this->hub),
+            'tracingState'        => $this->tracingState,
+            'context'             => $this->context,
+            'contextEntryFactory' => $this->contextEntryFactory,
+        ];
+    }
+
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         if (empty($this->dsn)) {
