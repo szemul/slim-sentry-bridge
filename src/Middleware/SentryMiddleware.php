@@ -19,7 +19,7 @@ use Szemul\LoggingErrorHandling\Context\ContextInterface;
 
 class SentryMiddleware implements MiddlewareInterface
 {
-    private ?string $dsn;
+    private bool $dsnIsSet;
 
     public function __construct(
         protected HubInterface $hub,
@@ -28,14 +28,14 @@ class SentryMiddleware implements MiddlewareInterface
         protected ContextEntryFactory $contextEntryFactory,
         ConfigInterface $config,
     ) {
-        $this->dsn = $config->get('application.sentry.dsn', null);
+        $this->dsnIsSet = !empty($config->get('application.sentry.dsn', null));
     }
 
     /** @return array<string,mixed>|null */
     public function __debugInfo(): ?array
     {
         return [
-            'dsn'                 => '** REDACTED',
+            'dsnIsSet'            => $this->dsnIsSet,
             'hub'                 => '** Instance of ' . get_class($this->hub),
             'tracingState'        => $this->tracingState,
             'context'             => $this->context,
@@ -45,7 +45,7 @@ class SentryMiddleware implements MiddlewareInterface
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        if (empty($this->dsn)) {
+        if (!$this->dsnIsSet) {
             return $handler->handle($request);
         }
 
