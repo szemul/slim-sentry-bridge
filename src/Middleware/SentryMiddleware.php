@@ -13,9 +13,9 @@ use Sentry\Tracing\TransactionContext;
 use Slim\Routing\Route;
 use Szemul\Config\ConfigInterface;
 use Szemul\DebuggerSentryBridge\SentryTracingState;
-use Szemul\LoggingErrorHandling\Context\ContextEntry;
-use Szemul\LoggingErrorHandling\Context\ContextEntryFactory;
-use Szemul\LoggingErrorHandling\Context\ContextInterface;
+use Szemul\LoggingErrorHandlingContext\ContextEntry;
+use Szemul\LoggingErrorHandlingContext\ContextEntryFactory;
+use Szemul\LoggingErrorHandlingContext\ContextInterface;
 
 class SentryMiddleware implements MiddlewareInterface
 {
