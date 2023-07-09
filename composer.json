@@ -7,10 +7,12 @@
         "php": "^8.0",
         "slim/slim": "^4.8",
         "sentry/sentry": "^3.3.2",
+        "szemul/bootstrap": "^1.0.0",
         "szemul/config": "^v1.0.0",
         "szemul/error-handler": "^v1.0.0|^2.0.0",
         "szemul/debugger-sentry-bridge": "^v1.0.0",
-        "szemul/logging-error-handling-context": "^v1.0.0"
+        "szemul/logging-error-handling-context": "^v1.0.0",
+        "szemul/sentry-error-handler": "^1.1.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0.0",
@@ -32,6 +34,7 @@
     },
     "config": {
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": false
     }
 }
