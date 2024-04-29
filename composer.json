@@ -12,7 +12,7 @@
         "szemul/error-handler": "^v1.0.0|^2.0.0",
         "szemul/debugger-sentry-bridge": "^v1.0.0",
         "szemul/logging-error-handling-context": "^v1.0.0",
-        "szemul/sentry-error-handler": "^1.1.1"
+        "szemul/sentry-error-handler": "^1.1.1|^2.0.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0.0",
