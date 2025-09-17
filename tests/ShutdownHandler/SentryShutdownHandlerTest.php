@@ -37,7 +37,7 @@ class SentryShutdownHandlerTest extends TestCase
         $this->sut->handleShutdown();
 
         // Noop assert to avoid issues with phpunit
-        $this->assertTrue(true);
+        $this->assertTrue(true); //@phpstan-ignore-line
     }
 
     private function createSpanAndExpectFinishToBeCalled(): void

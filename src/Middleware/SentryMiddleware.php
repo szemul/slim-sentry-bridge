@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Szemul\SlimSentryBridge\Middleware;
 
+use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -49,7 +50,7 @@ class SentryMiddleware implements MiddlewareInterface
             return $handler->handle($request);
         }
 
-        /** @var Route|null $route */
+        /** @var Route<ContainerInterface>|null $route */
         $route = $request->getAttribute('__route__');
 
         $routeName = $route?->getName() ?? $request->getRequestTarget();
