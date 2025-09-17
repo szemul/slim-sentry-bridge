@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91a5902ad4a1136e6b6d09b77d9c80fb",
+    "content-hash": "4b420f089e4406b2fc22871527278557",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -1725,21 +1725,21 @@
         },
         {
             "name": "szemul/sentry-error-handler",
-            "version": "1.1.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/szemul/sentry-error-handler.git",
-                "reference": "5f42666149e012076ac1bccb8d816cfc7a80b359"
+                "reference": "632053d1e0901b596bcecfe79a884d4c2d80f61d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/szemul/sentry-error-handler/zipball/5f42666149e012076ac1bccb8d816cfc7a80b359",
-                "reference": "5f42666149e012076ac1bccb8d816cfc7a80b359",
+                "url": "https://api.github.com/repos/szemul/sentry-error-handler/zipball/632053d1e0901b596bcecfe79a884d4c2d80f61d",
+                "reference": "632053d1e0901b596bcecfe79a884d4c2d80f61d",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.0",
-                "sentry/sentry": "^3.3.2",
+                "sentry/sentry": "^3.3.2|^4.0",
                 "szemul/error-handler": "^1.0.0|^2.0.0",
                 "szemul/logging-error-handling-context": "^1.0.0"
             },
@@ -1747,9 +1747,9 @@
                 "friendsofphp/php-cs-fixer": "^3.0.0",
                 "jetbrains/phpstorm-attributes": "^1.0",
                 "mockery/mockery": "^1.0",
-                "phpstan/phpstan": "^1.8.5",
-                "phpunit/phpunit": "^9.5.5",
-                "sentry/sdk": "^3.2.0"
+                "phpstan/phpstan": "^2.1.20",
+                "phpunit/phpunit": "^12",
+                "sentry/sdk": "^3.2.0|^4.0.0"
             },
             "type": "library",
             "autoload": {
@@ -1764,9 +1764,9 @@
             "description": "Error handler implementation for sentry that uses the error handling context",
             "support": {
                 "issues": "https://github.com/szemul/sentry-error-handler/issues",
-                "source": "https://github.com/szemul/sentry-error-handler/tree/1.1.1"
+                "source": "https://github.com/szemul/sentry-error-handler/tree/2.1.0"
             },
-            "time": "2022-09-10T05:11:45+00:00"
+            "time": "2025-09-17T07:49:55+00:00"
         }
     ],
     "packages-dev": [
